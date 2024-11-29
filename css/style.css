@@ -1,0 +1,111 @@
+.bd{
+    border-bottom: 1px dashed #000; 
+}
+
+body {
+    background-color: #F7ECDE;
+  }
+  .submit-bt {
+    width: 9rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.4rem;
+    color: white;
+    font-weight: 600;
+    background-color: #D1512D;
+  }
+  .bookmarkInputs {
+    border-width: 0.12rem 0 0.12rem 0;
+    border-style: dotted;
+    border-color: #22201f;
+    padding: 2rem 0rem;
+  }
+  .form h3 {
+    background: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    color: transparent;
+  }
+  .title h1 {
+    font-family: 'Milkshake', cursive;
+    color: #352E28;
+    font-size: 3rem;
+    font-weight: 800;
+    position: relative;
+    width: fit-content;
+  }
+  .title h1::before {
+    content: '';
+    width: 100%;
+    height: 30%;
+    background-color: #FEC260;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    transition: all 0.5s ;
+  }
+  .title h1:hover::before {
+    height: 55%;
+  }
+  .alert-container {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #0000007a;
+    z-index: 100;
+  }
+  .alert-container .box {
+    background-color: #121212;
+    width: fit-content;
+    padding: 2rem;
+    width: 25%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+  }
+  .alert-container .circles {
+    position: relative;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #EE5E5C;
+    border-radius: 100%;
+  }
+  .alert-container .circles::after {
+    content: '';
+    position: absolute;
+    left: 2rem;
+    top: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #FEBE2E;
+    border-radius: 100%;
+  }
+  .alert-container .circles::before {
+    content: '';
+    position: absolute;
+    left: 4rem;
+    top: 0;
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #4DB748;
+    border-radius: 100%;
+  }
+  .alert-container .close {
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  .alert-container .box-title {
+  
+    color: #ECE2CD;
+    font-family: 'Milkshake', cursive;
+  }
+  .rules {
+    font-size: 1.2rem;
+  }
+  .rules i {
+    color: #F6744B;
+  }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/v4-shims.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+
+
+    <div class="container d-flex justify-content-center mt-5">
+        <div class="w-75">
+            <h1 class="text-center bd">Bookmarker</h1>
+            <h3 class="text-center">
+                <i class="fa-solid fa-bookmark"></i>
+                Bookmark your favorite sites
+                <i class="fa-solid fa-bookmark"></i>
+            </h3>
+            <div class="bookmark bd pb-5">
+
+                <div class="site-name w-100 my-3 d-flex flex-column justify-content-center">
+                    <label for="sitename" class="pb-2 fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site
+                        Name</label>
+                    <input class="form-control" name="sitename" id="sitename" type="text">
+                </div>
+                <div class="site-url w-100 d-flex my-3 flex-column justify-content-center">
+                    <label for="siteUrl" class="pb-2 fw-semibold"><i class="fa-solid fa-link pe-2"></i> Site Url</label>
+                    <input class="form-control" name="siteurl" id="siteUrl" type="text">
+                </div>
+                <button onclick="createBook()" id="btn" class=" btn btn-success">Submit</button>
+            </div>
+            <table class="table mt-4 text-center bg-light">
+                <thead>
+                    <tr>
+                        <th class="text-capitalize">index</th>
+                        <th class="text-capitalize">Website Name</th>
+                        <th class="text-capitalize">Visit</th>
+                        <th class="text-capitalize">Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tableContent"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="validationModal" tabindex="-1" aria-labelledby="validationModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="validationModalLabel">Validation Error</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="modalMessage" class="mb-0"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
