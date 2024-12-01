@@ -33,14 +33,11 @@ function createBook() {
         return;
     }
 
-    // Validate site URL
     if (!urlRegex.test(siteUrl.value)) {
         siteUrl.classList.add('is-invalid');
         showModal('Please enter a valid site URL.');
         return;
     }
-
-    // Add new bookmark if validation passes
     var bigBox = {
         name: siteName.value,
         url: siteUrl.value.startsWith('http') ? siteUrl.value : 'http://' + siteUrl.value, // Ensure protocol
@@ -52,9 +49,6 @@ function createBook() {
 }
 
 
-    // Regular Expressions for validation
-
-    // Real-time validation for site URL
     siteUrl.addEventListener('input', function () {
         if (urlRegex.test(siteUrl.value)) {
             siteUrl.classList.remove('is-invalid');
